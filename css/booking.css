@@ -1,0 +1,620 @@
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booking__body {
+  width: clamp(280px, 100%, 1240px);
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px 0;
+  padding-right: 44px;
+  padding-left: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.booking__menu-inner {
+  width: 100%;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking__menu {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.booking__menu::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(32%, black), to(transparent));
+  background-image: -o-linear-gradient(left, black 32%, transparent);
+  background-image: linear-gradient(to right, black 32%, transparent);
+}
+
+.booking__menu-item {
+  position: relative;
+}
+
+.booking__menu-item:not(:last-child) {
+  margin-right: calc(10px + 40 * ((100vw - 320px) / 1120));
+}
+
+.booking__menu-item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #1F4AA8;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+}
+
+.booking__menu-item.active .booking__menu-link {
+  color: #1F4AA8;
+}
+
+.booking__menu-item.active::after {
+  opacity: 1;
+}
+
+.booking__menu-link {
+  font-size: 16px;
+  color: #888AA2;
+  line-height: 19.5px;
+  font-weight: 600;
+}
+
+.booking__block {
+  margin-bottom: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking__submit {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.booking__submit-btn {
+  width: clamp(70px, 30%, 232px);
+  padding: 20px 0;
+  border-radius: 30px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1F4AA8;
+  outline: none;
+  cursor: pointer;
+}
+
+.booking__submit-btn:hover {
+  background-color: #1f5ab4;
+}
+
+.booking__submit-btn:active {
+  background-color: #1F4AA8;
+}
+
+.type {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.type__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.type__label {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 19.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+}
+
+.type__label:not(:last-child) {
+  margin-right: 60px;
+}
+
+.type__input {
+  display: none;
+}
+
+.type__input:checked ~ .type__checkbox::after {
+  opacity: 1;
+  background: #1F4AA8;
+}
+
+.type__checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #1F4AA8;
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.type__checkbox::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #1F4AA8;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.trip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.trip__item {
+  padding: 0 0 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.trip__item:hover .above-form,
+.trip__item:hover .trip__sub-list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: visible;
+}
+
+.trip__item:first-child {
+  margin-right: 24px;
+}
+
+.trip__link {
+  background-color: transparent;
+  line-height: 17px;
+  font-size: 14px;
+  color: #1F4AA8;
+  margin-right: 10px;
+}
+
+.trip__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  background-color: transparent;
+  color: #1F4AA8;
+  position: relative;
+  font-size: 14px;
+}
+
+.trip__sub-list {
+  border: 0;
+  height: 100%;
+  background-color: transparent;
+  color: #1F4AA8;
+  padding-right: 5px;
+  color: #1F4AA8;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.trip__sub-list ~ ._icon-arrow-down {
+  padding: 0 3px;
+  position: absolute;
+  top: 3px;
+  right: -1px;
+  background-color: #fff;
+  pointer-events: none;
+}
+
+.trip__sub-item {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.above-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: clamp(89px, 100%, 150px);
+  height: 50px;
+  -webkit-box-shadow: 0 0 4px #837070;
+          box-shadow: 0 0 4px #837070;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 23px;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.above-form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.above-form__setting:nth-child(odd) button {
+  background-color: rgba(205, 205, 255, 0.8);
+  border-radius: 5px;
+}
+
+.above-form__setting:nth-child(2) {
+  padding: 0 7px;
+  cursor: default;
+}
+
+.above-form__input {
+  width: 100%;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
+.above-form__btn {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flight {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flight__destination {
+  width: clamp(100px, 100%, 781px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flight__point {
+  width: clamp(100px, 100%, 363px);
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 9.5px 15px;
+}
+
+.flight__icon,
+.flight__time-icon {
+  color: #1F4AA8;
+}
+
+.flight__icon::before,
+.flight__time-icon::before {
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.flight__destination-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.flight__change {
+  height: 37px;
+  min-width: 37px;
+  margin: 0 8px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.flight__change-btn {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.flight__datetime {
+  width: clamp(100px, 100%, 370px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flight__time {
+  width: clamp(50px, 50%, 174px);
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 9.5px 15px;
+  margin-left: 7px;
+}
+
+.flight__time:nth-child(1) {
+  margin-left: 15px;
+}
+
+.flight__time-icon {
+  color: #000;
+}
+
+.flight__time-inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flight__time-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 13px;
+  font-size: 11px;
+  padding-left: 4px;
+}
+
+.flight__time-day {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 2px;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@media (max-width: 1240px) {
+  .booking__body {
+    padding-right: calc(20px + 24 * ((100vw - 320px) / 920));
+  }
+
+  .booking__body {
+    padding-left: calc(20px + 24 * ((100vw - 320px) / 920));
+  }
+
+  .booking__menu-link {
+    font-size: calc(10px + 6 * ((100vw - 320px) / 920));
+  }
+
+  .type__label {
+    font-size: calc(12px + 4 * ((100vw - 320px) / 920));
+  }
+
+  .type__label:not(:last-child) {
+    margin-right: calc(10px + 50 * ((100vw - 320px) / 920));
+  }
+
+  .trip__item:first-child {
+    margin-right: calc(10px + 14 * ((100vw - 320px) / 920));
+  }
+
+  .trip__link {
+    font-size: calc(10px + 4 * ((100vw - 320px) / 920));
+  }
+
+  .trip__btn {
+    font-size: calc(10px + 4 * ((100vw - 320px) / 920));
+  }
+
+  .trip__sub-list {
+    font-size: calc(10px + 4 * ((100vw - 320px) / 920));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .type__checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .type__checkbox::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking__submit-btn {
+    padding: 13px 0;
+  }
+
+  .type {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .type__details {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .trip {
+    padding: 0 3.5em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+
+  .trip__item:first-child {
+    margin-right: 40px;
+  }
+
+  .trip__link {
+    font-size: 14px;
+  }
+
+  .trip__btn {
+    font-size: 14px;
+  }
+
+  .trip__sub-list {
+    font-size: 14px;
+  }
+
+  .flight {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .flight__destination {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .flight__datetime {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .flight__time {
+    width: 100%;
+  }
+
+  .flight__time:nth-child(1) {
+    margin: 0 0 15px 0;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 479.98px) {
+  .trip {
+    padding: 0;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .type__checkbox {
+    margin-right: 5px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .type__checkbox::after {
+    width: 7px;
+    height: 7px;
+  }
+
+  .flight__icon::before,
+  .flight__time-icon::before {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+
+@media (any-hover: none) {
+  .trip__sub-item {
+    width: 100%;
+  }
+}

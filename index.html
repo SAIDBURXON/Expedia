@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedia</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+    <div class="header__wrapper">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__nav nav">
+                    <div class="nav__logo">
+                        <a href="index.html" class="nav__logo-link">
+                            <img src="img/icons/logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="nav__menu menu-nav">
+                        <ul class="menu-nav__body">
+                            <li class="menu-nav__item"><a class="menu-nav__link active" href="">Home</a></li>
+                            <li class="menu-nav__item"><a class="menu-nav__link" href="">Trips</a></li>
+                            <li class="menu-nav__item"><a class="menu-nav__link" href="">About</a></li>
+                            <li class="menu-nav__item"><a class="menu-nav__link" href="">Support</a></li>
+                            <li class="menu-nav__item"><a class="menu-nav__link" href="">Travel</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__buttons">
+                        <div class="nav__signup">
+                            <a href="#" class="nav__signup-btn">Sign Up</a>
+                        </div>
+                        <a href="#" class="nav__signup-link _icon-sign-up"></a>
+                        <button type="button" class="menu__burger burger">
+                            <span class="burger__stroke"></span>
+                            <span class="burger__stroke"></span>
+                            <span class="burger__stroke"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__main">
+                    <h1 class="header__title">It Matters Who You Travel With</h1>
+                    <p class="header__tagline">We want you to feel confident in the travel experience you will have with us.</p>
+                </div>
+                <div class="header__booking booking">
+    <form class="booking__body" action="" >
+        <div class="booking__menu">
+            <ul class="booking__menu-inner">
+                <li class="booking__menu-item"><a href="#" class="booking__menu-link" data-trip="stays">Stays</a></li>
+                <li class="booking__menu-item"><a href="#" class="booking__menu-link" data-trip="flight">Flight</a></li>
+                <li class="booking__menu-item"><a href="#" class="booking__menu-link" data-trip="cars">Cars</a></li>
+                <li class="booking__menu-item"><a href="#" class="booking__menu-link" data-trip="package">Package</a></li>
+                <li class="booking__menu-item"><a href="#" class="booking__menu-link" data-trip="things to do">Things to do</a></li>
+            </ul>
+        </div>
+        <div class="booking__block">
+            <div class="booking__type type">
+                <div class="type__details">
+                    <label class="type__label">
+                        <input class="type__input" type="radio" id="oneway" name="trip_type" value="oneway">
+                        <div class="type__checkbox"></div>
+                        One-way
+                    </label>
+                    <label class="type__label">
+                        <input class="type__input" type="radio" id="return" name="trip_type" value="return">
+                        <div class="type__checkbox"></div>
+                        Return
+                    </label>
+                    <label class="type__label">
+                        <input class="type__input" type="radio" id="multi-city" name="trip_type" value="multi-city">
+                        <div class="type__checkbox"></div>
+                        Multi-city
+                    </label>
+                </div>
+                <ul class="type__trip trip">
+                    <li class="trip__item">
+                        <button type="button" class="trip__link" name="ticketsAmount" id="travellers" value="2">2 travellers</button>
+                        <button type="button" class="trip__btn _icon-arrow-down"></button>
+                        <div class="trip__above-form above-form">
+                            <div class="above-form__inner">
+                                <div class="above-form__setting">
+                                    <button type="button" class="above-form__btn" title="Subtract" id="decrement">-</button>
+                                </div>
+                                <div class="above-form__setting">
+                                    <output value="2" id="indicator"  class="above-form__input">2</output>
+                                </div>
+                                <div class="above-form__setting">
+                                    <button type="button" class="above-form__btn" title="Add" id="increment">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="trip__item">
+                        <div for="cabinClass" class="trip__btn">
+                            <select name="flightClass" class="trip__sub-list" id="cabinClass">
+                                <option selected="selected" value="Economy" class="trip__sub-item">Economy</option>
+                                <option value="Business" class="trip__sub-item">Business</option>
+                                <option value="First class" class="trip__sub-item">First class</option>
+                            </select>
+                            <span class="_icon-arrow-down"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="booking__block">
+            <div class="booking__flight flight">
+                <div class="flight__destination">
+                    <div class="flight__point">
+                        <div class="flight__icon _icon-plane-up"></div>
+                        <input type="text" placeholder="from" autocomplete="off" name="origin" value="" class="flight__destination-input">
+                    </div>
+                    <div class="flight__change">
+                        <button class="flight__change-btn _icon-exchange"></button>
+                    </div>
+                    <div class="flight__point">
+                        <div class="flight__icon _icon-plane-down"></div>
+                        <input type="text" placeholder="to" autocomplete="off" name="destination" value="" class="flight__destination-input">
+                    </div>
+                </div>
+                <div class="flight__datetime">
+                    <div class="flight__time">
+                        <div class="flight__time-icon _icon-calendar"></div>
+                        <div class="flight__time-inner">
+                            <span class="flight__time-text ">Departing</span>
+                            <input name="departingTime" value="10 Jul" class="flight__time-day">
+                        </div>
+                    </div>
+                    <div class="flight__time">
+                        <div class="flight__time-icon _icon-calendar"></div>
+                        <div class="flight__time-inner">
+                            <span class="flight__time-text">Returning</span>
+                            <input name="returningTime" value="11 Jul" class="flight__time-day">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="booking__submit">
+            <button type="submit" class="booking__submit-btn">Search</button>
+        </div>
+    </form>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+        <main class="main">
+            <div class="main__container">
+                <div class="main__body">
+                    <div class="main__grid grid">
+                        <h1 class="grid__title">Top Most Popular Destinations</h1>
+                        <div class="grid__section section">
+                            <img src="img/destination 1.png" alt="">
+                            <div class="section__wrapper">
+                                <div class="section__text">
+                                    <h3 class="section__name">Moraine Lake</h3>
+                                    <span class="section__location">Alberta, Canada</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__section section">
+                            <img src="img/destination 2.png" alt="">
+                            <div class="section__wrapper">
+                                <div class="section__text">
+                                    <h3 class="section__name">Cappadocia</h3>
+                                    <span class="section__location">Anatolia, Turkey</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__section section">
+                            <img src="img/destination 3.png" alt="">
+                            <div class="section__wrapper">
+                                <div class="section__text">
+                                    <h3 class="section__name">Ubud</h3>
+                                    <span class="section__location">Bali, Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__section section">
+                            <img src="img/destination 4.png" alt="">
+                            <div class="section__wrapper">
+                                <div class="section__text">
+                                    <h3 class="section__name">Hokokuji Bamboo Forest</h3>
+                                    <span class="section__location">Kamakura, Japan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__section section">
+                            <img src="img/destination 5.png" alt="">
+                            <div class="section__wrapper">
+                                <div class="section__text">
+                                    <h3 class="section__name">Kirkjufell</h3>
+                                    <span class="section__location">Grundarfjordur's, Iceland</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__app app">
+                        <div class="app__container">
+                            <div class="app__block">
+                                <h2 class="app__title">Download Expedia App!</h2>
+                            </div>
+                            <div class="app__block">
+                                <a href="" class="app__platform"><img src="img/google-play.png" alt=""></a>
+                                <a href="" class="app__platform"><img src="img/appstore.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer">
+    <div class="footer__container">
+        <div class="footer__body">
+            <div class="footer__main main-footer">
+                <a href="#"><img src="img/icons/logo.svg" alt=""></a>
+                <p class="main-footer__text">© 2021 Expedia, Inc., an Expedia Group company. All rights reserved. </p>
+            </div>
+            <div class="footer__menu menu">
+                <ul class="menu__column">
+                    <li class="menu__heading">Company</li>
+                    <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Jobs</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">List your property</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Partnership</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Advertising</a></li>
+                </ul>
+                <ul class="menu__column">
+                    <li class="menu__heading">Explore</li>
+                    <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Jobs</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">List your property</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Partnership</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Advertising</a></li>
+                </ul>
+                <ul class="menu__column">
+                    <li class="menu__heading">Term and Policies</li>
+                    <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Jobs</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">List your property</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Partnership</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Advertising</a></li>
+                </ul>
+                <ul class="menu__column">
+                    <li class="menu__heading">Help</li>
+                    <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Jobs</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">List your property</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Partnership</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Advertising</a></li>
+                </ul>
+
+                <ul class="menu__column">
+                    <li class="menu__heading">Get in touch</li>
+                    <li class="menu__item"><a href="#" class="menu__link link">Questions or feedbacks</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link link">We'd love to hear from you</a></li>
+                    <div class="media">
+                        <a href="#" class="media__link _icon-instagram"></a>
+                        <a href="#" class="media__link _icon-linkedin"></a>
+                        <a href="#" class="media__link _icon-twitter"></a>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url(../fonts/Montserrat-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  src: url(../fonts/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url(../fonts/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: url(../fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'icons';
+  font-display: swap;
+  src: url("../fonts/icons.ttf?z2lm7m") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  display: block !important;
+}
+
+._icon-sign-up:before {
+  content: "\e903";
+}
+
+._icon-calendar:before {
+  content: "\e900";
+}
+
+._icon-plane-up:before {
+  content: "\e901";
+}
+
+._icon-plane-down:before {
+  content: "\e902";
+}
+
+._icon-arrow-down:before {
+  content: "\e201";
+}
+
+._icon-exchange:before {
+  content: "\e202";
+}
+
+._icon-instagram:before {
+  content: "\e203";
+}
+
+._icon-linkedin:before {
+  content: "\e204";
+}
+
+._icon-twitter:before {
+  content: "\e207";
+}
